@@ -1,0 +1,10 @@
+# rubygem-simplecov requires version (~> 0.6)
+# check: https://github.com/colszowka/simplecov/blob/master/Gemfile
+# rubygem-shoulda requires version (~> 0.4.11) //old package
+# check: https://rubygems.org/gems/shoulda/versions/3.5.0
+# rubygem-rspec-its requires version (~> 0.5)
+# check: https://rubygems.org/gems/rspec-its/versions/1.2.0
+# rubygem-cucumber requires version (~> 0.6.1)
+# check: https://rubygems.org/gems/cucumber/versions/2.0.0
+# rubygem-rspec-core requires version (~> 0.6)
+watchurl=https://rubygems.org/gems/aruba/versions/(0.6.[\d\.]*)
