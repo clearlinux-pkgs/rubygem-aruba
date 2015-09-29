@@ -4,7 +4,7 @@
 #
 Name     : rubygem-aruba
 Version  : 0.6.2
-Release  : 2
+Release  : 3
 URL      : https://rubygems.org/downloads/aruba-0.6.2.gem
 Source0  : https://rubygems.org/downloads/aruba-0.6.2.gem
 Summary  : No detailed summary available
