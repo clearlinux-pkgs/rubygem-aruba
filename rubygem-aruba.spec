@@ -4,19 +4,19 @@
 #
 Name     : rubygem-aruba
 Version  : 0.6.2
-Release  : 3
+Release  : 4
 URL      : https://rubygems.org/downloads/aruba-0.6.2.gem
 Source0  : https://rubygems.org/downloads/aruba-0.6.2.gem
 Summary  : No detailed summary available
 Group    : Development/Tools
-License  : MIT
+License  : CC-BY-2.5 MIT
 BuildRequires : ruby
 BuildRequires : rubygem-bcat
 BuildRequires : rubygem-bundler
 BuildRequires : rubygem-childprocess
 BuildRequires : rubygem-cucumber
+BuildRequires : rubygem-devise
 BuildRequires : rubygem-diff-lcs
-BuildRequires : rubygem-ffi
 BuildRequires : rubygem-fuubar
 BuildRequires : rubygem-kramdown
 BuildRequires : rubygem-rake
@@ -24,6 +24,7 @@ BuildRequires : rubygem-rdoc
 BuildRequires : rubygem-rspec
 BuildRequires : rubygem-rspec-core
 BuildRequires : rubygem-rspec-expectations
+BuildRequires : rubygem-rspec-mocks
 BuildRequires : rubygem-rspec-support
 
 %description
@@ -70,214 +71,65 @@ popd
 
 %files
 %defattr(-,root,root,-)
-/usr/lib64/ruby/gems/2.2.0/cache/aruba-0.6.2.gem
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/Announcer/cdesc-Announcer.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/Announcer/cmd-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/Announcer/dir-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/Announcer/env-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/Announcer/new-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/Announcer/print-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/Announcer/stderr-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/Announcer/stdout-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/_create_file-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/_create_fixed_size_file-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/_ensure_newline-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/_mkdir-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/_read_interactive-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/_rm_rf-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/_write_interactive-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/absolute_path-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/all_output-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/all_stderr-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/all_stdout-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/announce_or_puts-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/announcer-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/append_output_to-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/append_to_file-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/assert_exact_output-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/assert_exit_status-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/assert_exit_status_and_output-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/assert_exit_status_and_partial_output-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/assert_failing_with-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/assert_matching_output-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/assert_no_partial_output-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/assert_not_exit_status-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/assert_not_matching_output-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/assert_partial_output-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/assert_partial_output_interactive-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/assert_passing_with-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/assert_success-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/cd-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/cdesc-Api.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/check_binary_file_content-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/check_directory_presence-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/check_exact_file_content-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/check_file_content-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/check_file_presence-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/check_file_size-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/check_filesystem_permissions-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/chmod-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/clean_current_dir-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/close_input-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/create_dir-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/current_dir-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/current_ruby-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/detect_ruby-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/dirs-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/eot-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/exit_timeout-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/filesystem_permissions-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/get_process-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/in_current_dir-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/io_wait-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/last_exit_status-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/mod%3f-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/only_processes-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/original_env-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/output_from-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/overwrite_file-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/pipe_in_file-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/prep_for_fs_check-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/processes-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/register_process-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/remove_dir-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/remove_file-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/restore_env-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/run-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/run_interactive-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/run_simple-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/set_env-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/stderr_from-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/stdout_from-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/stop_process-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/stop_processes%21-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/terminate_process-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/terminate_processes%21-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/touch_file-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/type-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/unescape-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/unset_bundler_env_vars-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/use_clean_gemset-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/with_env-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/with_file_content-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/write_file-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Api/write_fixed_size_file-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Config/before_cmd-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Config/cdesc-Config.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Config/hooks-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Config/new-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Error/cdesc-Error.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Hooks/append-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Hooks/cdesc-Hooks.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Hooks/execute-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Hooks/new-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/InProcess/FakeKernel/cdesc-FakeKernel.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/InProcess/FakeKernel/exit-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/InProcess/FakeKernel/exitstatus-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/InProcess/FakeKernel/new-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/InProcess/cdesc-InProcess.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/InProcess/main_class%3d-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/InProcess/new-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/InProcess/run%21-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/InProcess/stderr-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/InProcess/stdout-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/InProcess/stop-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/LaunchError/cdesc-LaunchError.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Reporting/again-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Reporting/cdesc-Reporting.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Reporting/children-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Reporting/commands-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Reporting/depth-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Reporting/description-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Reporting/files-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Reporting/index-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Reporting/index_title-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Reporting/output-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Reporting/pygmentize-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Reporting/report-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Reporting/reports-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Reporting/template-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/Reporting/title-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/SpawnProcess/cdesc-SpawnProcess.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/SpawnProcess/close_and_cache_err-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/SpawnProcess/close_and_cache_out-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/SpawnProcess/new-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/SpawnProcess/output-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/SpawnProcess/read-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/SpawnProcess/read_stdout-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/SpawnProcess/run%21-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/SpawnProcess/stderr-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/SpawnProcess/stdin-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/SpawnProcess/stdout-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/SpawnProcess/stop-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/SpawnProcess/terminate-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/SpawnProcess/wait_for_io-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/cdesc-Aruba.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/config-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/configure-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/Aruba/process-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/File/cdesc-File.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/RSpec/cdesc-RSpec.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/RbConfig/cdesc-RbConfig.ri
-/usr/lib64/ruby/gems/2.2.0/doc/aruba-0.6.2/ri/cache.ri
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/.document
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/.gitignore
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/.rspec
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/.rubocop.yml
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/.rvmrc
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/.travis.yml
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/CONTRIBUTING.md
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/Gemfile
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/History.md
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/LICENSE
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/README.md
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/Rakefile
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/aruba.gemspec
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/config/.gitignore
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/config/rubocop/exclude.yml
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/config/rubocop/include.yml
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/cucumber.yml
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/features/before_cmd_hooks.feature
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/features/command_environment_variables.feature
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/features/custom_ruby_process.feature
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/features/exit_statuses.feature
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/features/file_system_commands.feature
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/features/flushing.feature
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/features/interactive.feature
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/features/no_clobber.feature
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/features/output.feature
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/features/step_definitions/aruba_dev_steps.rb
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/features/support/custom_main.rb
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/features/support/env.rb
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/features/support/jruby.rb
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/features/utf-8.feature
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/lib/aruba.rb
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/lib/aruba/api.rb
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/lib/aruba/config.rb
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/lib/aruba/cucumber.rb
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/lib/aruba/cucumber/hooks.rb
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/lib/aruba/errors.rb
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/lib/aruba/in_process.rb
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/lib/aruba/jruby.rb
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/lib/aruba/matchers/rspec_matcher_include_regexp.rb
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/lib/aruba/reporting.rb
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/lib/aruba/spawn_process.rb
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/spec/aruba/api_spec.rb
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/spec/aruba/hooks_spec.rb
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/spec/aruba/jruby_spec.rb
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/spec/aruba/spawn_process_spec.rb
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/spec/spec_helper.rb
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/templates/css/console.css
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/templates/css/filesystem.css
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/templates/css/pygments-autumn.css
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/templates/files.erb
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/templates/images/LICENSE
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/templates/images/folder.png
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/templates/images/page_white.png
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/templates/images/page_white_gherkin.png
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/templates/images/page_white_ruby.png
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/templates/index.erb
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/templates/js/filesystem.js
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/templates/js/jquery-1.6.1.min.js
-/usr/lib64/ruby/gems/2.2.0/gems/aruba-0.6.2/templates/main.erb
-/usr/lib64/ruby/gems/2.2.0/specifications/aruba-0.6.2.gemspec
+/usr/lib64/ruby/gems/2.3.0/cache/aruba-0.6.2.gem
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/.document
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/.gitignore
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/.rspec
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/.rubocop.yml
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/.rvmrc
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/.travis.yml
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/CONTRIBUTING.md
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/Gemfile
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/History.md
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/LICENSE
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/README.md
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/Rakefile
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/aruba.gemspec
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/config/.gitignore
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/config/rubocop/exclude.yml
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/config/rubocop/include.yml
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/cucumber.yml
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/features/before_cmd_hooks.feature
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/features/command_environment_variables.feature
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/features/custom_ruby_process.feature
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/features/exit_statuses.feature
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/features/file_system_commands.feature
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/features/flushing.feature
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/features/interactive.feature
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/features/no_clobber.feature
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/features/output.feature
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/features/step_definitions/aruba_dev_steps.rb
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/features/support/custom_main.rb
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/features/support/env.rb
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/features/support/jruby.rb
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/features/utf-8.feature
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/lib/aruba.rb
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/lib/aruba/api.rb
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/lib/aruba/config.rb
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/lib/aruba/cucumber.rb
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/lib/aruba/cucumber/hooks.rb
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/lib/aruba/errors.rb
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/lib/aruba/in_process.rb
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/lib/aruba/jruby.rb
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/lib/aruba/matchers/rspec_matcher_include_regexp.rb
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/lib/aruba/reporting.rb
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/lib/aruba/spawn_process.rb
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/spec/aruba/api_spec.rb
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/spec/aruba/hooks_spec.rb
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/spec/aruba/jruby_spec.rb
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/spec/aruba/spawn_process_spec.rb
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/spec/spec_helper.rb
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/templates/css/console.css
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/templates/css/filesystem.css
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/templates/css/pygments-autumn.css
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/templates/files.erb
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/templates/images/LICENSE
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/templates/images/folder.png
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/templates/images/page_white.png
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/templates/images/page_white_gherkin.png
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/templates/images/page_white_ruby.png
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/templates/index.erb
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/templates/js/filesystem.js
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/templates/js/jquery-1.6.1.min.js
+/usr/lib64/ruby/gems/2.3.0/gems/aruba-0.6.2/templates/main.erb
+/usr/lib64/ruby/gems/2.3.0/specifications/aruba-0.6.2.gemspec
