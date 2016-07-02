@@ -4,12 +4,12 @@
 #
 Name     : rubygem-aruba
 Version  : 0.14.1
-Release  : 7
+Release  : 8
 URL      : https://rubygems.org/downloads/aruba-0.14.1.gem
 Source0  : https://rubygems.org/downloads/aruba-0.14.1.gem
 Summary  : No detailed summary available
 Group    : Development/Tools
-License  : CC-BY-2.5
+License  : CC-BY-2.5 MIT
 Requires: rubygem-aruba-bin
 BuildRequires : ruby
 BuildRequires : rubygem-bundler
